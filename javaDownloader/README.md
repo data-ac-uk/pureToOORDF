@@ -29,19 +29,20 @@ http://localhost:8080/pureEquipment/service/equipment/html
 ###resources/log4j.properties
 ```
 log4j.rootCategory=DEBUG, A1
-\#log4j.rootCategory=INFO, A1
+#log4j.rootCategory=INFO, A1
 log4j.appender.A1=org.apache.log4j.RollingFileAppender
-\#log4j.appender.A1.File=/pure/logs/pureEquipment.log
+#log4j.appender.A1.File=/pure/logs/pureEquipment.log
 log4j.appender.A1.File=/Users/awc/dev/logs/pureEquipment.log
 log4j.appender.A1.MaxFileSize=1000KB
-\# Keep ten backup files
+# Keep ten backup files
 log4j.appender.A1.MaxBackupIndex=10
-\# A1 uses PatternLayout.
+# A1 uses PatternLayout.
 log4j.appender.A1.layout=org.apache.log4j.PatternLayout
 log4j.appender.A1.layout.ConversionPattern=%d [%t] %-5p %c - %m%n
 ```
 
 ###build.xml
+```xml
 <!-- deploy properties -->
 <property name="servlet.container" value="/Users/awc/dev/apache/tomcat"/>
-
+````
